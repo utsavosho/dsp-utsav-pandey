@@ -18,7 +18,7 @@ def scaling_continuous_feature(col_names):
 
 
 def encoding_categorical_columns(col_name):
-    encoder = OneHotEncoder(drop='first', sparse=False,handle_unknown='ignore')
+    encoder = OneHotEncoder(drop='first', sparse=False, handle_unknown='ignore')
     encoder.fit(col_name)
     joblib.dump(encoder, "../models/encoder.joblib")
     e = encoder.transform(col_name)
